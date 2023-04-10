@@ -1,4 +1,7 @@
 */__pycache__/
+#PYTEST Cache 
 .pytest_cache/
+#Virtual Environment Should be Ignored
 fenv/
+#Logging file not Required in Docker Image,It will be Created while running the Application
 users&text_logging.log
