@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello from Flask</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+   min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          
+                                                                                             
+          <!-- Right-sided navbar links  home & empdispaly changed-->
+           
+         
+          
+          <div class="w3-right w3-hide-small">
+            <a href="{{url_for('adminlogout')}}" class="w3-bar-item w3-button"><i class="fa fa-user-circle"></i>LOGOUT</a>
+          </div>
+           
+          
+          <div class="w3-right w3-hide-small">
+            <a href="{{url_for('signup')}}" class="w3-bar-item w3-button"><i class="fa fa-users"></i>SIGNUP/Register</a>
+          </div>
+          <a href="{{url_for('signin')}}" class="w3-bar-item w3-button w3-wide"><i class="fa fa-refresh"></i>adminLOGIN</a>
+          
+         </div> </div>
+          
+{% block content %}
+{% endblock %}
+ </body>
+</html>

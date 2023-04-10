@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSV File Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+       
+      .bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://wallpapers.com/images/featured/wuuaobghtdllhliu.jpg");
+  min-height: 100%;
+}
+      
+    </style>
+</head>
+<body>
+{% extends "base.html"%}
+{% block content %}
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-text-white" style="padding:48px"> 
+     
+                 <h1 >Upload CSV file For Sentiment Analysis Mobile Review</h1>
+        
+          <form method="POST" action="{{ url_for('uploadcsv') }}" enctype="multipart/form-data">
+            <input type="hidden" id="token" name="token" value="{{token}}"><br><br>
+            <label for="file">CSV File:</label>
+            <input type="file" id="file" name="file" required><br><br>
+            <input type="submit" value="Upload">
+        </form>
+        
+        
+            
+            
+    
+</div></header>
+{% endblock %}
+ </body>
+</html>

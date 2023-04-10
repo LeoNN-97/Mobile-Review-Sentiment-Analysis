@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+       
+      .bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://wallpapers.com/images/featured/wuuaobghtdllhliu.jpg");
+  min-height: 100%;
+}
+      
+    </style>
+</head>
+<body>
+{% extends "base.html"%}
+{% block content %}
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-text-white" style="padding:48px"> 
+     
+                 <h1 >STUDENT PROFILE PAGE</h1>
+                 
+        <h1>Hello User: {{username}}</h1>
+        <h4>What do you Want to Perform</h4>
+        <a href="{{url_for('changepass')}}"><button onclick=""class="w3-button w3-blue">Update password</button></a><br><br>
+        <form method="POST" action="{{ url_for('delete') }}">
+            <input type="hidden" name="username" value="{{username}}">
+            <button class="w3-button w3-red" type="submit">Delete User</button>
+            </form>
+        <h4>To Perform Sentiment Analysis on Csv File</h4>
+        <a href="{{url_for('uploadcsv')}}"><button onclick=""class="w3-button w3-green">Upload CSV File</button></a><br><br>
+        
+          
+        
+            
+            
+    
+</div></header>
+{% endblock %}
+ </body>
+</html>
