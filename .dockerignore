@@ -1,0 +1,4 @@
+*/__pycache__/
+.pytest_cache/
+fenv/
+users&text_logging.log
